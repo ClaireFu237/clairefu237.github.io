@@ -1,1 +1,80 @@
+body {
+  margin: 0;
+  background: #f2f6fb;
+  color: #243247;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
 
+main {
+  box-sizing: border-box;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.profile {
+  padding: clamp(24px, 5vw, 44px);
+  border-radius: 18px;
+  background: #12335b;
+  color: #fff;
+}
+
+.profile h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+}
+
+.profile p {
+  margin: 10px 0 0;
+}
+
+.graduation {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #e4efff;
+  color: #12335b;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+main > h2 {
+  margin: 32px 0 16px;
+  color: #12335b;
+}
+
+.project-card {
+  margin-bottom: 18px;
+  padding: clamp(18px, 4vw, 28px);
+  border: 1px solid #dce5ef;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgb(18 51 91 / 6%);
+}
+
+.project-card h3 {
+  margin: 0;
+  color: #12335b;
+}
+
+.project-card h3 + p {
+  margin-top: 4px;
+  color: #52647a;
+  font-size: 0.9rem;
+}
+
+.project-card h4 {
+  margin: 18px 0 4px;
+}
+
+.project-card h4 + p {
+  margin-top: 0;
+}
+
+.project-card a {
+  color: #174f9b;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
