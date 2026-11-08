@@ -64,9 +64,32 @@
       View on GitHub
     </a>
   </p>
+<article class="project-card">
+  <h3>Biomedical Literature Retrieval</h3>
+  <p>Johns Hopkins University · NLP Team Project · Jan–Apr 2026</p>
+
+  <p>
+    Built a dense retrieval pipeline that ranks PubMed articles for
+    biomedical questions from BioASQ Task 13b. We fine-tuned a SciBERT
+    bi-encoder on question–article pairs, trained it with hard negatives,
+    and reranked candidates by combining semantic similarity with
+    keyword overlap.
+  </p>
+
+  <p>
+    <strong>Results:</strong> Retrieval fine-tuning raised Hit@1 from 9%
+    to 84% on the original corpus. After adding 1,000 distractor documents,
+    the fine-tuned baseline achieved 82% Hit@1. On that same augmented
+    corpus, hard-negative training and reranking reached 92% Hit@1
+    and 0.9342 MRR@20.
+  </p>
+
+  <p>
+    <a href="https://github.com/ClaireFu237/Biomedical-Paper-Retrieval">
+      View on GitHub
+    </a>
+  </p>
 </article>
-    <h3>Biomedical Literature Retrieval</h3>
-    <p>Fine-tuned a SciBERT retriever and evaluated it on BioASQ queries.</p>
   </main>
 </body>
 </html>
