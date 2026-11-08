@@ -13,83 +13,75 @@
 
     <h2>Selected Projects</h2>
     <article class="project-card">
-  <h3>AI Resume Ranking System</h3>
-  <p>Entagile Capstone Project · Feb–Apr 2026</p>
+      <h3>AI Resume Ranking System</h3>
+      <p>Entagile Capstone Project · Feb–Apr 2026</p>
 
-  <p>
-    An AI-assisted screening tool that converts PDF and DOCX resumes
-    into structured candidate profiles and ranks them against job requirements.
-  </p>
+      <h4>Project Description</h4>
+      <p>
+        Takes PDF or DOCX resumes and a job description, recruiter notes, or both.
+        The system extracts structured candidate profiles, applies required criteria,
+        and uses pgvector similarity search to shortlist candidates. It returns a
+        ranked shortlist with weighted scores and explanations for each criterion.
+      </p>
 
-  <p>
-    <strong>My contributions:</strong> Developed the FastAPI and Pydantic
-    extraction pipeline, combined rule-based filters with pgvector similarity
-    search and configurable scoring, and built a React and TypeScript
-    interface for uploads and ranking review. I also added caching to
-    avoid repeated LLM requests for schema extraction and scoring.
-  </p>
+      <h4>Result</h4>
+      <p>
+        Tested the full screening workflow locally and on AWS EC2. Compared five
+        LLMs across resume parsing, query rewriting, and candidate scoring.
+        In the parsing benchmark, GPT-5.4-mini took <strong>10.76 seconds</strong>
+        versus <strong>34.20 seconds</strong> for GPT-5.4.
+      </p>
 
-  <p>
-    <a href="https://github.com/boogiepopVSjzf/AI_Resume_Ranking_system">
-      View on GitHub
-    </a>
-  </p>
-</article>
+      <p><a href="https://github.com/boogiepopVSjzf/AI_Resume_Ranking_system">View on GitHub</a></p>
+    </article>
+
     <article class="project-card">
-  <h3>Natural Language to SQL</h3>
-  <p>Holokai · AI Research &amp; Development Internship · Jun–Aug 2026</p>
+      <h3>Natural Language to SQL</h3>
+      <p>Holokai · AI Research &amp; Development Internship · Jun–Aug 2026</p>
 
-  <p>
-    Built a Python pipeline that turns plain-English questions into
-    read-only SQL for BigQuery and PostgreSQL. The pipeline uses schema
-    metadata to guide OpenAI, Anthropic, and Gemini models without
-    sending database rows to the LLM.
-  </p>
+      <h4>Project Description</h4>
+      <p>
+        Takes a plain-English business question and database schema metadata.
+        It generates and validates read-only SQL for PostgreSQL or BigQuery,
+        retries failed queries with SQL repair, and returns the SQL and, when
+        executed, the query results. Database rows stay out of the LLM prompts.
+      </p>
 
-  <p>
-    <strong>My contributions:</strong> Implemented BigQuery dry-run checks,
-    read-only transactions in PostgreSQL, and automated SQL repair after
-    query failures. Built a batch evaluation workflow that runs the same
-    questions across models and reasoning-effort settings.
-  </p>
+      <h4>Result</h4>
+      <p>
+        On a benchmark of <strong>12 business questions</strong> against a
+        <strong>32-table mock database</strong>, the selected configuration for each
+        engine answered <strong>11 of 12 questions correctly (92%)</strong>.
+        Average LLM response time per question was <strong>5.94 seconds</strong>
+        for PostgreSQL and <strong>10.98 seconds</strong> for BigQuery.
+      </p>
 
-  <p>
-    <strong>Internship evaluation:</strong> Tested SQL generation on a
-    database with 60+ tables and compared 20+ model and reasoning-effort
-    configurations on accuracy, latency, and token usage.
-  </p>
+      <p><a href="https://github.com/ClaireFu237/Natural_language_to_SQL">View on GitHub</a></p>
+    </article>
 
-  <p>
-    <a href="https://github.com/ClaireFu237/Natural_language_to_SQL">
-      View on GitHub
-    </a>
-  </p>
-<article class="project-card">
-  <h3>Biomedical Literature Retrieval</h3>
-  <p>Johns Hopkins University · NLP Team Project · Jan–Apr 2026</p>
+    <article class="project-card">
+      <h3>Biomedical Literature Retrieval</h3>
+      <p>Johns Hopkins University · NLP Team Project · Jan–Apr 2026</p>
 
-  <p>
-    Built a dense retrieval pipeline that ranks PubMed articles for
-    biomedical questions from BioASQ Task 13b. We fine-tuned a SciBERT
-    bi-encoder on question–article pairs, trained it with hard negatives,
-    and reranked candidates by combining semantic similarity with
-    keyword overlap.
-  </p>
+      <h4>Project Description</h4>
+      <p>
+        Takes a biomedical question from BioASQ Task 13b and returns a ranked list
+        of relevant PubMed articles using their titles and abstracts. The system
+        uses a SciBERT retriever trained with hard negatives and reranks candidates
+        by combining semantic similarity with keyword overlap.
+      </p>
 
-  <p>
-    <strong>Results:</strong> Retrieval fine-tuning raised Hit@1 from 9%
-    to 84% on the original corpus. After adding 1,000 distractor documents,
-    the fine-tuned baseline achieved 82% Hit@1. On that same augmented
-    corpus, hard-negative training and reranking reached 92% Hit@1
-    and 0.9342 MRR@20.
-  </p>
+      <h4>Result</h4>
+      <p>
+        Retrieval fine-tuning raised Hit@1 from <strong>9% to 84%</strong> on the
+        original corpus. On the corpus augmented with <strong>1,000 distractor
+        documents</strong>, hard-negative training and reranking raised
+        Hit@1 from <strong>82% to 92%</strong> and reached an MRR@20 of
+        <strong>0.9342</strong>.
+      </p>
 
-  <p>
-    <a href="https://github.com/ClaireFu237/Biomedical-Paper-Retrieval">
-      View on GitHub
-    </a>
-  </p>
-</article>
+      <p><a href="https://github.com/ClaireFu237/Biomedical-Paper-Retrieval">View on GitHub</a></p>
+    </article>
   </main>
 </body>
 </html>
